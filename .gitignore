@@ -1,0 +1,12 @@
+.persistence_store/
+node_modules/
+_tmp/
+tmp/
+.tmp/
+tmp_files/
+.env
+.DS_Store
+.idea
+*.ai
+*.psd
+*.pdf

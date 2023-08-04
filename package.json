@@ -1,0 +1,32 @@
+{
+  "name": "mirai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node  run.js",
+    "start:dev:trace": "node --trace-warnings run.js",
+    "start:dev": "nodemon run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zmts/mirai.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zmts/mirai/issues"
+  },
+  "homepage": "https://github.com/zmts/mirai#readme",
+  "dependencies": {
+    "fastest-validator": "^1.17.0",
+    "moleculer": "^0.14.29",
+    "moleculer-web": "^0.10.6",
+    "nats": "^2.15.1",
+    "pino": "^8.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
