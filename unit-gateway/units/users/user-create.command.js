@@ -14,7 +14,7 @@ class UserCreateCommand extends UsersBaseCommand {
   static get validationRules () {
     return {
       body: {
-        name: new RequestRule(UserSchema.schema.name, { allowed: [null, ''] }),
+        name: new RequestRule(UserSchema.schema.name),
         email: new RequestRule(UserSchema.schema.email),
       }
     }
@@ -24,7 +24,7 @@ class UserCreateCommand extends UsersBaseCommand {
     const { params, body } = this.preparePayload(ctx)
     this.validate({ ctx, params, body })
 
-    const data = await this.broker.call(`${this.unitName}.${this.name}`, params)
+    const data = await this.broker.call(`${this.unitName}.${this.name}`, body)
     return this.result({ data })
   }
 }

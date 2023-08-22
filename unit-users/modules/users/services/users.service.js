@@ -8,6 +8,13 @@ class UsersService {
   static createUser (ctx) {
     return { id: 1 }
   }
+
+  static updateUser (ctx) {
+    return {
+      id: Number(ctx.params.params.id),
+      name: ctx.params.body.name
+    }
+  }
 }
 
 module.exports = { UsersService }

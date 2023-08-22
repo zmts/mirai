@@ -22,7 +22,9 @@ class UserUpdateCommand extends UsersBaseCommand {
   static async run(ctx) {
     const { params, body } = this.preparePayload(ctx)
     this.validate({ ctx, params, body })
-    return this.result({ data: 'ok' })
+
+    const data = await this.broker.call(`${this.unitName}.${this.name}`, { body, params })
+    return this.result({ data })
   }
 }
 
